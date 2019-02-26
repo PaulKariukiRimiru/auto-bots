@@ -4,8 +4,27 @@
   "description": "some scraping bots",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "tsnd --respawn --transpileOnly --project ./tsconfig.json ./index.ts",
+    "lint": "tslint {src}/**/*.ts --fix",
+    "build": "tsc"
   },
   "author": "Paul Kariuki",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "puppeteer": "^1.12.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.10",
+    "@types/puppeteer": "^1.12.1",
+    "@types/request": "^2.48.1",
+    "@types/request-promise": "^4.1.42",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-microsoft-contrib": "^6.0.0"
+  }
 }
